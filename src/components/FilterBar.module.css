@@ -1,0 +1,110 @@
+.filterBar {
+  display: flex;
+  flex-direction: column; 
+}
+
+.priceInputs {
+  display: flex; 
+  gap: 10px; /* Пробел между полями ввода */
+  width: 100%; /* Заменим фиксированную ширину на 100% */
+  max-width: 250px; /* Максимальная ширина контейнера для полей ввода цены */
+}
+
+.input {
+  padding: 8px;
+  margin-top: 8px;
+  width: 100%; 
+  border: 1px solid black; /* Добавляем черную обводку */
+  border-radius: 2px; /* Опционально: скругление углов */
+  box-sizing: border-box; /* Убедитесь, что padding не влияет на ширину */
+}
+
+.input:focus {
+  outline: none; /* Убираем стандартное обводка при фокусе */
+  border-color: #ff9500; /* Опционально: цвет обводки при фокусе */
+}
+
+/* Новый стиль для строки поиска */
+.searchInput {
+  padding: 8px;
+  margin-top: 8px;
+  width: 100%; /* Заменим фиксированную ширину на 100% */
+  max-width: 255px; /* Максимальная ширина строки поиска */
+  border: 1px solid black; /* Черная обводка */
+  border-radius: 2px; /* Опционально: скругление углов */
+  box-sizing: border-box; /* Убедитесь, что padding не влияет на ширину */
+}
+
+.searchInput:focus {
+  outline: none; /* Убираем стандартное обводка при фокусе */
+  border-color: #ff9500; /* Опционально: цвет обводки при фокусе */
+}
+
+.searchP {
+  font-weight: bolder;
+  margin: 10px;
+  padding: 5px 5px;
+}
+
+.priceInputs input[type="number"] {
+  -moz-appearance: textfield; /* Для Firefox */
+}
+
+/* Убираем стрелочки (спиннеры) в других браузерах */
+.priceInputs input[type="number"]::-webkit-outer-spin-button,
+.priceInputs input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Убираем стрелочки */
+  margin: 0; /* Убираем отступы */
+}
+
+.colorFilters {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /* Отображение в столбик */
+}
+
+.colorCheckbox {
+  margin-bottom: 5px; /* Отступ между чекбоксами */
+}
+
+.colorFilterTitle {
+  font-weight: bolder;
+  margin: 10px;
+  padding: 5px 5px;
+}
+
+.colorCheckbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #000;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.colorCheckbox input[type="checkbox"]:checked {
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+  .filterBar {
+    align-items: center; 
+  }
+
+  .priceInputs {
+    flex-direction: column; 
+    width: 100%; 
+  }
+
+  .input, .searchInput {
+    width: 100%; 
+  }
+}

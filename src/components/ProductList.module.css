@@ -1,0 +1,49 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .productCard {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .name {
+    font-size: 1.25rem;
+    margin-top: 8px;
+  }
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    }
+  
+    .productCard {
+      padding: 12px; 
+    }
+  
+    .name {
+      font-size: 1rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr; 
+    }
+  
+    .productCard {
+      padding: 10px; 
+    }
+  
+    .name {
+      font-size: 0.9rem; 
+    }
+  }
