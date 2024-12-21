@@ -1,8 +1,8 @@
 # Lamoda
 
-![]()
+![](https://github.com/soqyew/Lamoda/blob/main/lamoda.png?raw=true)
 
-## Available Scripts
+## Функционал
 
 In the project directory, you can run:
 
